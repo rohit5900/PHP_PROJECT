@@ -1,86 +1,34 @@
-To branch and clone a repository on GitHub web and on the Git CLI, follow these steps:
-
-On GitHub Web:
-Branch:
-
-Navigate to your repository.
-Click on the "main" branch dropdown.
-Type the name of your new branch in the "Find or create a branch" field.
-```sh
-Click "Create branch: <your-branch-name> from 'main'".
-```
-Clone:
-
-On your repository's main page, click the green "Code" button.
-Copy the URL provided under the "HTTPS" tab.
-Open your terminal and run:
-sh
-```sh
-git clone <copied-URL>
-```
-On Git CLI:
-Branch:
-
-Navigate to your local repository in your terminal.
-Create and switch to a new branch using:
-sh
-```sh 
-git checkout -b <your-branch-name>
-```
-Clone:
-
-Open your terminal and run:
-sh
-```sh
-git clone <repository-URL>
- ```
-Navigate to the cloned repository: sh
-```sh 
-cd <repository-name>
- ```
-Replace <your-branch-name> and <repository-URL> with your desired branch name and the URL of the repository you want to clone, respectively.
-  
-1️⃣ Create a New Branch
-```sh
-git checkout -b <new-branch-name>
-```
-or
-
-```sh
-git switch -c <new-branch-name>
-```
-🔹 This creates and switches to a new branch, keeping the main code untouched.
-
-2️⃣ Add or Modify Files
-Edit or add your files, then stage them:
-```sh
-git add <file-name>
-```
-or to add all changes:
-```sh
-git add .
-```
-3️⃣ Commit the Changes
-```sh
-git commit -m "Added new feature or file"
-```
-This saves the changes in the new branch.
-
-4️⃣ Push the New Branch (Optional, if working with GitHub)
-```sh
-git push origin <new-branch-name>
-```
-🔹 This uploads your new branch to the remote repo without affecting main.
-
-5️⃣ Merge into Main (Later, if needed)
-Once your changes are complete and tested, you can merge them into main:
-```sh
-git checkout main
-git merge <new-branch-name>
-```
-If working with GitHub, you can open a Pull Request (PR) instead.
-Navigate to the cloned repository: sh
-```sh 
-cd <repository-name>
- ```
-Replace <your-branch-name> and <repository-URL> with your desired branch name and the URL of the repository you want to clone, respectively.
+I'll help you run the files from the start. Here's a step-by-step guide:
+First, let's make sure you have the necessary software installed:
+XAMPP (which includes Apache and MySQL)
+A web browser
+A code editor (like VS Code)
+Here's how to run the project:
+Start XAMPP:
+Open XAMPP Control Panel
+Start Apache and MySQL services
+Set up the databases:
+Open your web browser and go to http://localhost/phpmyadmin
+Create two databases:
+login_system
+sleep_tracker
+Import the database schemas:
+In phpMyAdmin, select the login_system database
+Click on "Import" tab
+Choose the file PHP_PROJECT-main/login_system/database.sql
+Click "Go" to import
+Then select the sleep_tracker database
+Click on "Import" tab
+Choose the file PHP_PROJECT-main/pages/backend/update_database.sql
+Click "Go" to import
+Place the project files:
+Copy the entire PHP_PROJECT-main folder to your XAMPP's htdocs directory
+The typical path is: C:\xampp\htdocs\PHP_PROJECT-main
+Access the project:
+Open your web browser
+Go to http://localhost/PHP_PROJECT-main/login_system/login.html
+Test the registration and login:
+Click on "Sign-up" to create a new account
+Fill in your details (name, email, password)
+After registration, you can log in with your credentials
+Upon successful login, you'll be redirected to the main site
