@@ -1,34 +1,40 @@
-I'll help you run the files from the start. Here's a step-by-step guide:
-First, let's make sure you have the necessary software installed:
-XAMPP (which includes Apache and MySQL)
-A web browser
-A code editor (like VS Code)
-Here's how to run the project:
-Start XAMPP:
-Open XAMPP Control Panel
-Start Apache and MySQL services
-Set up the databases:
-Open your web browser and go to http://localhost/phpmyadmin
-Create two databases:
-login_system
-sleep_tracker
-Import the database schemas:
-In phpMyAdmin, select the login_system database
-Click on "Import" tab
-Choose the file PHP_PROJECT-main/login_system/database.sql
-Click "Go" to import
-Then select the sleep_tracker database
-Click on "Import" tab
-Choose the file PHP_PROJECT-main/pages/backend/update_database.sql
-Click "Go" to import
-Place the project files:
-Copy the entire PHP_PROJECT-main folder to your XAMPP's htdocs directory
-The typical path is: C:\xampp\htdocs\PHP_PROJECT-main
-Access the project:
-Open your web browser
-Go to http://localhost/PHP_PROJECT-main/login_system/login.html
-Test the registration and login:
-Click on "Sign-up" to create a new account
-Fill in your details (name, email, password)
-After registration, you can log in with your credentials
-Upon successful login, you'll be redirected to the main site
+# Sleep Tracker Application
+
+A web application for tracking sleep patterns with user authentication.
+
+## Automatic Setup
+
+1. **Prerequisites**:
+   - Install XAMPP (https://www.apachefriends.org/)
+   - Make sure Apache and MySQL services are running
+
+2. **Quick Start**:
+   - Copy the entire project folder to `C:\xampp\htdocs\`
+   - Open your web browser
+   - Go to `http://localhost/PHP_PROJECT-main/setup.php`
+   - The setup script will automatically:
+     - Create required databases
+     - Create necessary tables
+     - Set up foreign key relationships
+   - After successful setup, click the link to go to the login page
+
+3. **Using the Application**:
+   - Register a new account
+   - Log in with your credentials
+   - Start tracking your sleep patterns
+
+## Manual Setup (if needed)
+
+If the automatic setup fails, you can manually:
+1. Create databases `login_system` and `sleep_tracker`
+2. Import the SQL files from:
+   - `login_system/database.sql`
+   - `pages/backend/update_database.sql`
+
+## Troubleshooting
+
+If you encounter any issues:
+1. Check if XAMPP services are running
+2. Verify database credentials in `config/db.php`
+3. Check file permissions
+4. Look for error messages in the browser console
